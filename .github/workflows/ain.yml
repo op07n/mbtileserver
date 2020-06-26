@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     
     steps:
 
@@ -16,11 +16,13 @@ jobs:
         repository: consbio/mbtileserver.git
         path: main        
           
-          
-    - name: Build
-      uses: sosedoff/actions/golang-build@master
-      with:
-          args: linux/amd64         
+       
+    - name: build
+      run: |
+            cd /home/runner/work/mbtileserver/mbtileserver/main
+            go build .       
+       
+        
           
           
           
