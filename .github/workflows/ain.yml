@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+
+          
+    - name: Checkout repo
+      uses: actions/checkout@v2
+      with:
+        repository: consbio/mbtileserver.git
+        path: main        
+          
+          
+    - name: build
+      run: |
+            cd /home/runner/work/mbtileserver/mbtileserver/main
+            ./autogen.sh  
