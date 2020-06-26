@@ -14,10 +14,14 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: consbio/mbtileserver.git
-        path: main        
+        path: .        
           
           
-    - name: build
-      run: |
-            cd /home/runner/work/mbtileserver/mbtileserver/main
-            go build . 
+    - name: Build
+      uses: sosedoff/actions/golang-build@master
+      with:
+          args: windows/amd64          
+          
+          
+          
+
