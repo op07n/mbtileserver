@@ -20,7 +20,7 @@ jobs:
     - name: Build
       uses: sosedoff/actions/golang-build@master
       with:
-          args: windows/amd64          
+          args: linux/amd64         
           
           
           
