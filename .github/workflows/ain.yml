@@ -20,4 +20,4 @@ jobs:
     - name: build
       run: |
             cd /home/runner/work/mbtileserver/mbtileserver/main
-            ./autogen.sh  
+            go build . 
